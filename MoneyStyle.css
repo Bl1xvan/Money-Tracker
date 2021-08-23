@@ -1,0 +1,209 @@
+* {
+    display: block;
+    margin: auto;
+    box-sizing: border-box;
+    font-family: Verdana, sans-serif;
+}
+
+title{
+    display: none;
+}
+/*for the inputbox*/
+
+.labels-form button {
+    padding: 7px;
+}
+
+.labels-form {
+    padding-top: 10px;
+    padding-bottom: 20px;
+    border-radius: 25px;
+}
+
+.labels-form h2 {
+    text-align: center;
+    padding: 15px;
+}
+
+#labels-form-income {
+    background-color: #5F9EA0;
+
+}
+
+#labels-form-income h2{
+    color: white;
+}
+
+#labels-form-expense {
+    background-color: #973636;
+}
+
+#labels-form-expense h2{
+    color: white;
+}
+
+.labels-input {
+    margin-top : 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #ff4c47;
+    background-color: #fefefb;
+    padding: 8px;
+    font-weight: bold;
+}
+
+/*for the ExchangeList*/
+
+.exchange-section{
+    margin-bottom: 10px;
+}
+
+/*start exchange twins*/
+
+.exchange-twins {
+    text-align: center;
+    border-bottom: 3px solid gray;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+#exchange-income h2{
+    color: #2b585a;
+}
+
+#exchange-income h4{
+    color: teal;
+}
+
+#exchange-expense h2{
+    color: #753434;
+}
+
+#exchange-expense h4{
+    color: palevioletred;
+}
+/*end exchange twins*/
+
+/*start exchange list*/
+
+#exchange-order{
+    list-style-type:decimal;
+}
+
+.exchange-list-item-plus, .exchange-list-item-minus{
+    width: 100%;
+    display: inline-block;
+    
+}
+.exchange-list-item-plus span, .exchange-list-item-minus span{
+    float: left;
+    margin-right: 10px;
+}
+
+.exchange-list-item-plus span:nth-child(4) {
+    color: rgb(34, 128, 84);
+    font-weight: bold;
+    
+}
+
+.exchange-list-item-minus span:nth-child(4) {
+    color: rgb(138, 21, 21);
+    font-weight: bold;
+
+}
+
+#exchange-order span{
+    width: 130px;
+    text-align: center;
+}
+
+#exchange-order button {
+    padding: 10px 10px;
+    width: 125px;
+}
+
+.exchange-list-item-plus button{
+    background-color: rgb(22, 110, 22);
+}
+
+.exchange-list-item-minus button {
+    background-color: rgb(129, 16, 16);
+}
+/*end exchange list*/
+
+/*start exchange total*/
+#exchange-total h2{
+    color: purple;
+}
+
+#exchange-total h4{
+    color:blueviolet;
+}
+/*end exchange total*/
+
+/*For both*/
+
+
+button {
+    background-color: #006622;
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
+
+#labels-button-income, #labels-button-expense {
+    width: 50%;
+    font-weight: bold;
+    padding: 10px 5px;
+}
+
+#labels-button-income{
+    background-color: #1c4c42;
+}
+
+#labels-button-expense{
+    background-color: #4d1c2c;
+}
+
+@media screen and (min-width: 700px) {
+
+/*For the labels form*/
+
+    #labelbox{
+        width: 30%;
+    }
+
+    .section {
+        float: left;
+    }
+
+    .labels-form {
+        width: 80%;
+        margin-bottom: 40px;
+        margin-top: 40px;
+    }
+
+/*For the exchange section*/    
+
+#exchangebox{
+    width: 70%;
+    padding: 30px;
+}
+
+.exchange-twins{
+    float: left;
+    width: 50%;
+}
+
+.exchange-twins:nth-child(1){
+    border-right: gray 5px solid;
+}
+
+/*For exchange total*/
+
+#exchange-total span{
+    float: right;
+}
+
+
+}
