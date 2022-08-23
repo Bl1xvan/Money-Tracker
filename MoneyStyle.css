@@ -132,11 +132,12 @@ body{
 
 #exchange-list::-webkit-scrollbar{
   background-color: transparent;
+  width: 10px;
 }
 
 #exchange-list::-webkit-scrollbar-thumb{
   background-color: var(--purple);
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 #half1{
