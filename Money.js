@@ -77,12 +77,30 @@ function addExpense(e){
 
 }
 
+
 //formats new item
 function addNewItem(newItem) {
+
+
     const newListItem = document.createElement('li');
     newListItem.classList.add(newItem.price > 0 ? 'exchange-list-item-plus' : 'exchange-list-item-minus');
 
-    newListItem.innerHTML = `<span>${newItem.id}</span><span>${newItem.date}</span><span>${newItem.labelname}</span><span>${newItem.price}</span><span><button class="delete-button" onclick="removeItem(${newItem.id})">delete</button></span>`;
+    let price = newItem.price;
+    let format = price.toFixed(2)
+  
+
+    newListItem.innerHTML = `
+    <div class="itemhalf" id="half1">
+        <span class="smallfont">${newItem.id}</span>
+        <span class="itemname">${newItem.labelname}</span>
+        <span class="smallfont">${newItem.date}</span>
+    </div>
+    <div class="itemhalf" id="half2">
+        <span>${format}</span>
+        <button class="delete-button" onclick="removeItem(${newItem.id})">
+        X</button>
+       
+    </div>`;
     exchangeOrder.appendChild(newListItem);
 }
 

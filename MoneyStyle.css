@@ -1,209 +1,198 @@
+:root {
+  --blue: #205a7e;
+  --lightblue: #328bc3;
+  --red: #b52b21;
+  --lightred: #ff554d;
+  --white: #ffffff;
+  --purple: #864acf;
+  --green: #7ebbc4;
+}
+
 * {
-    display: block;
-    margin: auto;
     box-sizing: border-box;
+}
+
+body{
+    margin: 0;
     font-family: Verdana, sans-serif;
+    background-image: linear-gradient(to bottom, #8fffe3, #789ab5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
-title{
-    display: none;
-}
-/*for the inputbox*/
-
-.labels-form button {
-    padding: 7px;
+#container{
+  width: 90vw;
+  max-width: 1000px;
+  min-width: 300px;
 }
 
-.labels-form {
-    padding-top: 10px;
-    padding-bottom: 20px;
-    border-radius: 25px;
+.exchange-list-item-plus .itemname{
+  color: var(--lightblue);
 }
 
-.labels-form h2 {
-    text-align: center;
-    padding: 15px;
+.exchange-list-item-minus .itemname{
+  color: var(--lightred);
 }
 
-#labels-form-income {
-    background-color: #5F9EA0;
-
+#labelbox, #exchange-pair, #exchange-order li{
+  display: grid;
+  gap: 1em;
 }
 
-#labels-form-income h2{
-    color: white;
+#labelbox, #exchange-pair{
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
-#labels-form-expense {
-    background-color: #973636;
+#exchange-order li{
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  padding: 10px 0;
 }
 
-#labels-form-expense h2{
-    color: white;
+#exchangebox{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.labels-input {
-    margin-top : 10px;
-    margin-bottom: 10px;
-    text-align: center;
-    color: #ff4c47;
-    background-color: #fefefb;
-    padding: 8px;
-    font-weight: bold;
+.smallfont{
+  color: var(--green);
 }
 
-/*for the ExchangeList*/
-
-.exchange-section{
-    margin-bottom: 10px;
+#exchange-total h2{
+  color: var(--purple);
+}
+.labels-form, .exchange-twins{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-/*start exchange twins*/
+.exchange-twins, #exchange-list, #exchange-total{
+  background-color: var(--white);
+  border-radius: 10px;
+}
 
-.exchange-twins {
-    text-align: center;
-    border-bottom: 3px solid gray;
-    padding-bottom: 15px;
-    margin-bottom: 15px;
+.labels-form{
+  min-height: 200px;
+  justify-content: space-between;
+  border-radius: 10px;
+}
+
+#labels-form-income{
+  background-color: var(--blue);
+  color: var(--white);
+}
+
+#labels-form-expense{
+  background-color: var(--red);
+  color: var(--white);
 }
 
 #exchange-income h2{
-    color: #2b585a;
-}
-
-#exchange-income h4{
-    color: teal;
+  color: var(--lightblue);
 }
 
 #exchange-expense h2{
-    color: #753434;
+  color: var(--lightred);
 }
 
-#exchange-expense h4{
-    color: palevioletred;
-}
-/*end exchange twins*/
-
-/*start exchange list*/
-
-#exchange-order{
-    list-style-type:decimal;
+.labels-input{
+  padding: 7px;
 }
 
-.exchange-list-item-plus, .exchange-list-item-minus{
-    width: 100%;
-    display: inline-block;
-    
-}
-.exchange-list-item-plus span, .exchange-list-item-minus span{
-    float: left;
-    margin-right: 10px;
-}
-
-.exchange-list-item-plus span:nth-child(4) {
-    color: rgb(34, 128, 84);
-    font-weight: bold;
-    
+.labels-button{
+  background-color: transparent;
+  width: 100%;
+  border-top: 1px solid white;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+  color: white;
+  padding: 10px 0;
+  font-weight: bold;
+  font-size: 1.25em;
+  text-align: center;
 }
 
-.exchange-list-item-minus span:nth-child(4) {
-    color: rgb(138, 21, 21);
-    font-weight: bold;
-
+#labels-button-income:hover{
+  background-color: var(--lightblue);
 }
 
-#exchange-order span{
-    width: 130px;
-    text-align: center;
+#labels-button-expense:hover{
+  background-color: var(--lightred);
 }
 
-#exchange-order button {
-    padding: 10px 10px;
-    width: 125px;
+#exchange-list{
+  height: 325px;
+  margin-top: 15px;
+  overflow-y: scroll;
 }
 
-.exchange-list-item-plus button{
-    background-color: rgb(22, 110, 22);
+#exchange-list::-webkit-scrollbar{
+  background-color: transparent;
 }
 
-.exchange-list-item-minus button {
-    background-color: rgb(129, 16, 16);
-}
-/*end exchange list*/
-
-/*start exchange total*/
-#exchange-total h2{
-    color: purple;
+#exchange-list::-webkit-scrollbar-thumb{
+  background-color: var(--purple);
+  border-radius: 5px;
 }
 
-#exchange-total h4{
-    color:blueviolet;
-}
-/*end exchange total*/
-
-/*For both*/
-
-
-button {
-    background-color: #006622;
-    color: white;
-    border: none;
-    border-radius: 10px;
+#half1{
+  display: flex;
+  flex-direction: column;
 }
 
-#labels-button-income, #labels-button-expense {
-    width: 50%;
-    font-weight: bold;
-    padding: 10px 5px;
+#half2{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
-#labels-button-income{
-    background-color: #1c4c42;
+.smallfont{
+  font-size: .7em;
 }
 
-#labels-button-expense{
-    background-color: #4d1c2c;
+.itemname{
+  padding: 7px 0;
+  font-weight: bold;
 }
 
-@media screen and (min-width: 700px) {
-
-/*For the labels form*/
-
-    #labelbox{
-        width: 30%;
-    }
-
-    .section {
-        float: left;
-    }
-
-    .labels-form {
-        width: 80%;
-        margin-bottom: 40px;
-        margin-top: 40px;
-    }
-
-/*For the exchange section*/    
-
-#exchangebox{
-    width: 70%;
-    padding: 30px;
+.delete-button{
+  background-color: transparent;
+  font-weight: bold;
+  padding: 15px;
+  margin-left: 10px;
+  border: none;
 }
 
-.exchange-twins{
-    float: left;
-    width: 50%;
+.delete-button:hover{
+  background-color: var(--green);
+  color: white;
 }
 
-.exchange-twins:nth-child(1){
-    border-right: gray 5px solid;
+#exchange-total{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 15px;
+  padding: 0 40px;
 }
 
-/*For exchange total*/
+@media screen and (min-width: 900px){
+  #container{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1em;
+  }
 
-#exchange-total span{
-    float: right;
+  #labelbox{
+  justify-content: space-between;
+ 
+}
+
 }
 
 
-}
+
