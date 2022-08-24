@@ -109,6 +109,7 @@ body{
   border-bottom: none;
   border-left: none;
   border-right: none;
+  border-radius: 0 0 10px 10px;
   color: white;
   padding: 10px 0;
   font-weight: bold;
